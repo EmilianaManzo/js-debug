@@ -10,7 +10,7 @@
 *******************************************************************************/
 
 
-ESERCIZIO 1
+// ESERCIZIO 1
 function checkAge() {
     const myAge = 32;
     const message = '';
@@ -45,7 +45,7 @@ checkAge();
 
 
 
-ESERCIZIO 2
+// ESERCIZIO 2
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`); 
@@ -69,7 +69,7 @@ printColorsNumber();
 
 
 
-ESERCIZIO 3
+// ESERCIZIO 3
 function addNumbers() {
     const userNumber = prompt('Inserisci un numero');
     const total = userNumber + 12;
@@ -98,14 +98,34 @@ addNumbers();
 
 
 // // ESERCIZIO 4
+function checkAccess() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    let grantAccess = 'false';
+
+    if (addresses.includes(userEmail)) {
+        grantAccess = 'true';
+    }
+
+    if (grantAccess === true) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccess();
+
+
+// corretto
 // function checkAccess() {
 //     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 //     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     let grantAccess = 'false';
+//     let grantAccess = false;
 
 //     if (addresses.includes(userEmail)) {
-//         grantAccess = 'true';
+//         grantAccess = true;
 //     }
 
 //     if (grantAccess === true) {
@@ -116,8 +136,45 @@ addNumbers();
 // }
 // checkAccess();
 
+/**
+1. controlla se la mail dell'utente è presente nell'array delle mail a cui è concesso l'accesso, se non c'è l'accesso è negato, se c'è l'accesso è consentito 
+2. si, i valori booleani devono essere scritti senza apici, altrimenti sono letti come stringhe e non funzionano
+3. no 
+ */
 
-// // ESERCIZIO 5 (suggerimento: c'è un solo errore)
+
+
+
+// ESERCIZIO 5 (suggerimento: c'è un solo errore)
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    let grantAccess = 'false';
+
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i];
+
+        if (userEmail.length > 5) {
+
+            if (email === userEmail) {
+                grantAccess = 'true';
+
+            }
+
+        }
+
+        if (grantAccess) {
+            console.log('Accesso consentito!');
+        } else {
+            console.log('Accesso negato!');
+        }
+    }
+    checkAccessImproved();
+
+
+// corretto
 // function checkAccessImproved() {
 //     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
@@ -143,9 +200,16 @@ addNumbers();
 //             console.log('Accesso negato!');
 //         }
 //     }
-//     checkAccessImproved();
+// }
+
+// checkAccessImproved();
 
 
+/**
+1. controlla se la mail dell'utente è presente nell'array delle mail a cui è concesso l'accesso, se non c'è l'accesso è negato, se c'è l'accesso è consentito, in più controlla che la lunghezza minima dell'email dell' utente deve essere almeno di 5 
+2. si, mancava la parentesi di chiusura della funzione
+3. no 
+ */
 
 
 
