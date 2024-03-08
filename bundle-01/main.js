@@ -23,7 +23,7 @@ for (let i = 0; i > 5; i++) {
 /**
 1. questo ciclo for cicla per 5 volte partendo da 0
 2. si sono presenti errori di sintassi (i > 5  non viene riconosciuto e crea un loop infinito, il simbolo è <)
-3. si
+3. no
  */
 
 
@@ -44,10 +44,11 @@ function addIfEven(num) {
 //     return num;
 // }
 
+//console.log(addIfEven()); 
 /**
 1. restituisce un numero, ma se il numero è pari a questo si deve aggiungere 5 
 2. si sono presenti errori di sintassi percè in parentesi ci deve essere il doppio uguale
-3. no
+3. si non viene mai richiamata la funzione
  */
 
 

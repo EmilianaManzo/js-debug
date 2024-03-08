@@ -180,7 +180,7 @@ function checkAccessImproved() {
 
 //     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     let grantAccess = 'false';
+//     let grantAccess = false;
 
 //     for (let i = 0; i < addresses.length; i++) {
 //         const email = addresses[i];
@@ -188,7 +188,7 @@ function checkAccessImproved() {
 //         if (userEmail.length > 5) {
 
 //             if (email === userEmail) {
-//                 grantAccess = 'true';
+//                 grantAccess = true;
 
 //             }
 
@@ -207,7 +207,7 @@ function checkAccessImproved() {
 
 /**
 1. controlla se la mail dell'utente è presente nell'array delle mail a cui è concesso l'accesso, se non c'è l'accesso è negato, se c'è l'accesso è consentito, in più controlla che la lunghezza minima dell'email dell' utente deve essere almeno di 5 
-2. si, mancava la parentesi di chiusura della funzione
+2. si, mancava la parentesi di chiusura della funzione e i booleani sono tra gli apici 
 3. no 
  */
 
